@@ -1,0 +1,36 @@
+package piscine
+
+func AtoiBase(s string, base string) int {
+	if s == "" {
+		return 0
+	}
+	if base == "" {
+		return 0
+	}
+	if !BaseUniqueAndValid(base) {
+		return 0
+	}
+	n := 0
+	for _, char := range s {
+		count := 0
+		for i, letter := range base {
+			if char == letter {
+				count = i
+				break
+			}
+		}
+		n = n*len(base) + count
+	}
+	return n
+}
+
+func BaseUniqueAndValid(s string) bool {
+	for i, char := range s {
+		for j, letter := range s {
+			if (char == letter && i != j) || char == '-' || char == '+' {
+				return false
+			}
+		}
+	}
+	return true
+}
