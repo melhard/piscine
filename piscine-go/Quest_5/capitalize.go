@@ -28,7 +28,7 @@ func Capitalize(s string) string {
 }
 
 
-/*package main
+package main
 
 import "fmt"
 
@@ -52,4 +52,4 @@ func Capitalize(s string) string {
 		}
 	}
 	return string(ss)
-}*/
+}
