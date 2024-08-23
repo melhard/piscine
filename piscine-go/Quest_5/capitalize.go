@@ -26,3 +26,30 @@ func Capitalize(s string) string {
 	}
 	return string(mySlice)
 }
+
+
+/*package main
+
+import "fmt"
+
+func main() {
+	fmt.Println(Capitalize("hello! How are you? how+are+things+4you?"))
+}
+func isprint(r rune) bool {
+	if r >= 'a' && r <= 'z' || r >= 'A' && r <= 'Z' || r >= '0' && r <= '9' {
+		return false
+	}
+	return true
+}
+func Capitalize(s string) string {
+	ss := []rune(s)
+	if ss[0] >= 'a' && ss[0] <= 'z' {
+		ss[0] = ss[0] - ('a' - 'A')
+	}
+	for i := 0; i < len(s); i++ {
+		if ss[i] >= 'a' && ss[i] <= 'z' && isprint(ss[i-1]) {
+			ss[i] = ss[i] - ('a' - 'A')
+		}
+	}
+	return string(ss)
+}*/
